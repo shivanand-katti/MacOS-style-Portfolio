@@ -61,8 +61,8 @@ const Welcome = () => {
         const subtitleCleanUp = setupTextHover(subtitleRef.current, "subtitle");
 
         return () => {
-            subtitleCleanUp();
-            titleCleanup();
+            subtitleCleanUp?.();
+            titleCleanup?.();
         }
     }, [])
     return (
@@ -71,10 +71,10 @@ const Welcome = () => {
                 {renderText("Hey I'm Shivanand! Welcome to my", 'text-3xl font-georama', 100)}
             </p>
             <h1 ref={titleRef} className="mt-7">
-                {renderText("porffolio", 'text-9xl italic font-georama', 400)}
+                {renderText("portfolio", 'text-9xl italic font-georama', 400)}
             </h1>
             <div className="small-screen">
-                <p>this portfolio is designed for desktop/tabled screen only</p>
+                <p>this portfolio is designed for desktop/tablet screen only</p>
             </div>
         </section>
     );
